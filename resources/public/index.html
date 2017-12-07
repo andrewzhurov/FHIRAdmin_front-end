@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="fragment" content="!">
+    <title>FHIR Admin</title>
+    <meta name="description" content="No description">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/css/dashboard.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+  </head>
+  <body>
+      <div id="app"></div>
+      <script type="text/javascript">
+       if (location.hostname == '127.0.0.1') {
+         // https://github.com/google/closure-library/issues/844
+         var CLOSURE_DEFINES = {'goog.ENABLE_CHROME_APP_SAFE_SCRIPT_LOADING': true};
+       }
+      </script>
+      <script src="/js/compiled/app.js"></script>
+      <script type="text/javascript">
+       if (location.hostname == '127.0.0.1') {
+         window.onload = function() { client.core.init() }
+       } else {
+         client.core.init();
+       }
+      </script>
+  </body>
+</html>
